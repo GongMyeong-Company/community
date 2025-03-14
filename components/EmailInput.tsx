@@ -4,7 +4,7 @@ import {StyleSheet, View} from 'react-native';
 import InputField from './InputField';
 
 function EmailInput() {
-  const {control} = useFormContext()
+  const {control, setFocus} = useFormContext()
 
   return (
        <Controller 
@@ -22,12 +22,16 @@ function EmailInput() {
             }}
             render={({field: {onChange, value}, fieldState: {error}})=> (
                 <InputField 
-                label="이메일" 
-                placeholder="이메일을 입력해주세요." 
-                autoCapitalize='none'
-                value={value}
-                onChangeText={onChange}
-                error={error?.message}
+                    autoFocus
+                    label="이메일" 
+                    placeholder="이메일을 입력해주세요."
+                    inputMode='email'
+                    returnKeyType='next'
+                    submitBehavior='submit'
+                    onSubmitEditing={()=> setFocus("password")}
+                    value={value}
+                    onChangeText={onChange}
+                    error={error?.message}
                 />
             )}
        /> 

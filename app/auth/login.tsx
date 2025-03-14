@@ -1,11 +1,8 @@
 import FixedBottomCTA from "@/components/FixedBottomCTA";
-import InputField from "@/components/InputField";
-import { useState } from "react";
 import { StyleSheet, View } from "react-native";
-import {FormProvider, SubmitHandler, useForm} from "react-hook-form"
+import {FormProvider, useForm} from "react-hook-form"
 import EmailInput from "@/components/EmailInput";
 import PasswordInput from "@/components/PasswordInput";
-import PasswordConfirmInput from "@/components/PasswordConfirmInput";
 
 type FormValues = {
     email: string;

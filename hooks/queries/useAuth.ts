@@ -49,9 +49,19 @@ function useAuth(){
     const loginMutation  = useLogin();
     const signupMutation = useSignup();
 
+    const logout = () => {
+        removeHeader("Authorization");
+        deleteSecureStore("accessToken");
+        queryClient.resetQueries({queryKey:["auth"]});
+    }
+
     return {auth:{
         id: data?.id || "",
-    }, loginMutation, signupMutation};
+        }, 
+        loginMutation, 
+        signupMutation,
+        logout,
+    };
 }
 
 export default useAuth;

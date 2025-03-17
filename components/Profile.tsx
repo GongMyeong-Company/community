@@ -36,14 +36,14 @@ const styles = StyleSheet.create({
         gap: 8,
     },
     avatar: {
-        width: 50,
-        height: 50,
+        width: 40,
+        height: 40,
         borderRadius: 50,
         borderWidth: StyleSheet.hairlineWidth,
         borderColor: colors.GRAY_300,
     },
     nickname: {
-        fontSize: 15,
+        fontSize: 14,
         fontWeight: 'bold',
         color: colors.BLACK,
     },

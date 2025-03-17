@@ -57,13 +57,13 @@ const styles = StyleSheet.create({
         borderTopWidth: StyleSheet.hairlineWidth,
     },
     title: {
-        fontSize: 18,
+        fontSize: 17,
         color: colors.BLACK,
         fontWeight: '600',
         marginVertical: 8,
     },
     description: {
-        fontSize: 16,
+        fontSize: 15,
         color: colors.BLACK,
         marginBottom: 14,
     },

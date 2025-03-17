@@ -47,8 +47,9 @@ function RootNavigator(){
   }, [auth.id]); 
 
   return <Stack>
-    <Stack.Screen name="auth" options={{headerShown: false}}/>
     <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    <Stack.Screen name="auth" options={{headerShown: false}}/>
+    <Stack.Screen name="post" options={{ headerShown: false }} />
     <Stack.Screen name="+not-found" />
   </Stack>
 }

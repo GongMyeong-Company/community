@@ -36,7 +36,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: colors.WHITE,
     },
-    standard: {},
+    standard: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: colors.ORANGE_600,
+    },
     outlined: {},
     pressed: {
         opacity: 0.8,

@@ -1,14 +1,15 @@
 import { colors } from '@/constants';
-import React, { ForwardedRef, forwardRef } from 'react';
+import React, { ForwardedRef, forwardRef, ReactNode } from 'react';
 import {StyleSheet, Text, TextInput, TextInputProps, View} from 'react-native';
 
 interface InputFieldProps extends TextInputProps {
     label?: string;
     variant?: "filled"|"standard"|"outlined";
     error?: string;
+    rightChild?: ReactNode;
 }
 
-function InputField({label, variant="filled", error="", ...props}: InputFieldProps, ref?: ForwardedRef<TextInput>) {
+function InputField({label, variant="filled", error="", rightChild=null, ...props}: InputFieldProps, ref?: ForwardedRef<TextInput>) {
   return (
     <View>
         {label && <Text style={styles.label}>{label}</Text>}
@@ -22,6 +23,7 @@ function InputField({label, variant="filled", error="", ...props}: InputFieldPro
                 autoCorrect={false}
                 {...props}
             />
+            {rightChild}
         </View>
         {Boolean(error) && <Text style={styles.error}>{error}</Text>}
     </View>

@@ -30,7 +30,9 @@ function FeedItem({post, isDetail = false}: FeedItemProps) {
     showActionSheetWithOptions({options, cancelButtonIndex, destructiveButtonIndex}, (seletedIndex?:number) => {
         switch (seletedIndex) {
             case destructiveButtonIndex:
-                deletePost.mutate(post.id);
+                deletePost.mutate(post.id, {
+                    onSuccess: ()=> isDetail && router.back(),
+                });
                 alert("삭제가 완료되었습니다.");
                 break;
             case 1:

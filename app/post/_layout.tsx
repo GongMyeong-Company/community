@@ -26,6 +26,16 @@ export default function PostLayout() {
                     ),
                 }}
             />
+            <Stack.Screen
+                name= "update/[id]"
+                options={{
+                    title: "수정",
+                    headerShown: true,
+                    headerLeft: ()=> (
+                        <Feather name="arrow-left" size={28} color={"black"} onPress={()=>router.back()} />
+                    ),
+                }}
+            />
         </Stack>
     );
 }
